@@ -27,7 +27,7 @@ jobs:
               with:
                   key: ${{ secrets.SSH_PRIVATE_KEY }}
                   known_hosts: unnecessary
-			-name 
+
             - name: Adding Known Hosts
               run: ${{ secrets.SSH_AUTH}} >> ~/.ssh/known_hosts
 
