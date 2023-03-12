@@ -27,6 +27,9 @@ jobs:
               with:
                   key: ${{ secrets.SSH_PRIVATE_KEY }}
                   known_hosts: unnecessary
+			-name 
+            - name: Adding Known Hosts
+              run: ${{ secrets.SSH_AUTH}} >> ~/.ssh/known_hosts
 
             - name: Deploy with rsync
               run: rsync -avz ./dist ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}:/home/zellwk/zellwk.com/dist/
